@@ -28,6 +28,25 @@ function generatePassword() {
     includeLowerCaseLetters = confirm("Do you want to include lower case letters?");
     includeNumbers = confirm("Do you want to include numbers?");
   }
+// Generate a password based on the user's criteria
+var charSet = "";
+if (includeSpecialCharacters) {
+  charSet += "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+}
+if (includeUpperCaseLetters) {
+  charSet += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+}
+if (includeLowerCaseLetters) {
+  charSet += "abcdefghijklmnopqrstuvwxyz";
+}
+if (includeNumbers) {
+  charSet += "0123456789";
+}
+
+for (var i = 0; i < numberOfCharacters; i++) {
+  var randomIndex = Math.floor(Math.random() * charSet.length);
+  generatedPassword += charSet[randomIndex];
+}
 
   
   return generatedPassword;
