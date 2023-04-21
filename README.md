@@ -1,4 +1,4 @@
-# 03 JavaScript: Password Generator
+# JavaScript: Password Generator
 
 This is a simple web application that generates a random password based on user criteria. The generated password can include a specified number of characters (between 8 and 128), and can include a combination of special characters, upper case letters, lower case letters, and numbers.
 
